@@ -62,13 +62,13 @@ def Animacion(ang=45):
         """
         if v0x > 0:  # Si la velocidad en x es mayor a 0 se asigna el cuadrante 1
             ax.set_xlim(0, alc if alc > h else h)
-            ax.set_ylim(0, alc if alc > h else h)
+            ax.set_ylim(-20, alc if alc > h else h)
         elif v0x < 0:  # Si la velocidad en x es menor a 0 se asigna el cuadrante 2
             ax.set_xlim(alc if abs(alc) > h else -h, 0)
             ax.set_ylim(0, abs(alc) if abs(alc) > h else h)
         else:  # Si la velocidad en x es 0 se asignan los dos cuadrantes
             ax.set_xlim(-(h//2), h//2)
-            ax.set_ylim(0, h)
+            ax.set_ylim(-20, h)
         ax.set_title("Tiro parabolico a un angulo de " +
                      str(ang) + " grados")  # Se asigna el titulo
         return line,
